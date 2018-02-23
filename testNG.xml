@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="POM suite1 - regressions test" >
+    <test name="POM Testng test1"  >
+        <classes >
+            <class name="com.chartlab.qa.testcases.HomePageTest"/>
+        </classes>
+    </test>
+</suite>

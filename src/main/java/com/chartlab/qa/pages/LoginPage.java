@@ -3,6 +3,7 @@ package com.chartlab.qa.pages;
 
 import com.chartlab.qa.base.TestBase;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,12 +11,15 @@ public class LoginPage extends TestBase {
 
     /*Page Factory or Object Repository*/
     @FindBy(name="username")
+    @CacheLookup
     WebElement user;
 
     @FindBy(name="password")
+    @CacheLookup
     WebElement pass;
 
     @FindBy(xpath="//input[@type='submit']")
+    @CacheLookup
     WebElement loginBtn;
 
     @FindBy(xpath="//img[contains(@class,'img-responsive')]")
@@ -28,10 +32,6 @@ public class LoginPage extends TestBase {
     }
 
     //Actions :
-    public String validateLoginPageTitle(){
-        return driver.getTitle();
-    }
-
     public boolean validateCRMImage(){
         return crmLogo.isDisplayed();
     }

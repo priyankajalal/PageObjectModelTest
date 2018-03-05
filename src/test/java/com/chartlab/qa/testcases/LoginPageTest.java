@@ -4,11 +4,14 @@ package com.chartlab.qa.testcases;
 import com.chartlab.qa.base.TestBase;
 import com.chartlab.qa.pages.HomePage;
 import com.chartlab.qa.pages.LoginPage;
+import com.chartlab.qa.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class LoginPageTest extends TestBase {
 
@@ -24,11 +27,12 @@ public class LoginPageTest extends TestBase {
         initialization();
         //Could be written as: LoginPage loginPage = new LoginPage();
         loginPage = new LoginPage();
+
     }
 
     @Test(priority = 1)
     public void loginPageTitleTest(){
-        String title = loginPage.validateLoginPageTitle();
+        String title = TestBase.getTitle();
         Assert.assertEquals(title,"#1 Free CRM for Any Business: Online Customer Relationship Software");
     }
 

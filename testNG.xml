@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="POM suite1 - regressions test" >
     <listeners>
-        <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+        <listener class-name="utils.ExtentReporterNG"/>
     </listeners>
 
     <test name="POM Testng test1" >
         <classes >
-            <class name="org.crm.qa.testcases.CrmLoginPageTest"/>
+            <class name="CrmLoginPageTest"/>
 
 
         </classes>

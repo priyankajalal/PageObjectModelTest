@@ -29,7 +29,6 @@ public class BaseControl {
         return getDriver().findElement(locator);
     }
 
-
     public By getLocator() {
         return locator;
     }

@@ -1,14 +1,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="POM suite1 - regressions test" >
+<suite name="Cross browser Testing" >
     <!--<listeners>-->
         <!--<listener class-name="com.chartlab.testcases.ChartTest"/>-->
     <!--</listeners>-->
 
-    <test name="POM Testng test1" >
+    <test name="Chrome browser Testing" >
+        <parameter name="browser" value="chrome"/>
         <classes >
-            <class name="com.chartlab.testcases.MyTest"/>
-
-
+            <class name="tutorial.Practice.CrossBrowserTesting"/>
         </classes>
     </test>
+
+    <test name="Firefox browser Testing" >
+        <parameter name="browser" value="firefox"/>
+        <classes >
+            <class name="tutorial.Practice.CrossBrowserTesting"/>
+        </classes>
+    </test>
+
+
+
 </suite>

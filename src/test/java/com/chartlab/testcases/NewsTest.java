@@ -16,27 +16,25 @@ import java.util.Calendar;
 public class NewsTest {
 
     WebDriver driver;
+    NewsPage newsPage;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() throws Exception {
         driver = new ChromeDriver();
+        LoginPage LoginPage = PageFactory.init(driver, LoginPage.class);
+        LoginPage.login();
+        newsPage = PageFactory.init(driver, NewsPage.class);
+        newsPage.newsTab.click();
     }
 
     @Test
     public void checkNewsCountTest() throws Exception {
-        LoginPage LoginPage = PageFactory.init(driver, LoginPage.class);
-        LoginPage.login();
-        NewsPage newsPage = PageFactory.init(driver, NewsPage.class);
-
         News news= newsPage.getNews();
         System.out.println(news);
     }
+
     @Test
     public void newsDateTest() throws Exception {
-        LoginPage LoginPage = PageFactory.init(driver, LoginPage.class);
-        LoginPage.login();
-        NewsPage newsPage = PageFactory.init(driver, NewsPage.class);
-        newsPage.newsTab.click();
         newsPage.marketWatchTab.click();
 
         String latestNewsDate = newsPage.getNewsDate();

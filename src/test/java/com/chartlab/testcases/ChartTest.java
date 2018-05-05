@@ -37,10 +37,10 @@ public class ChartTest {
 
     //@Test
     public void verifySymbolNameTest() throws Exception {
-        System.out.println(chartPage.verifySymbolNameOnMiddle());
-        Assert.assertTrue(chartPage.verifySymbolNameOnMiddle().
+        System.out.println(chartPage.getSymbolNameOnMiddle());
+        Assert.assertTrue(chartPage.getSymbolNameOnMiddle().
                 contains(Config.get("defaultSymbol")));
-        Assert.assertTrue(chartPage.verifySymbolNameOnRight().
+        Assert.assertTrue(chartPage.getSymbolNameOnRight().
                 contains(Config.get("defaultSymbol")));
     }
 

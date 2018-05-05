@@ -35,11 +35,11 @@ public class ChartPage extends CommonPage {
         return textFound;
     }
 
-    public String verifySymbolNameOnMiddle(){
+    public String getSymbolNameOnMiddle(){
         return symbolNameOnMiddle.getText();
     }
 
-    public String verifySymbolNameOnRight(){
+    public String getSymbolNameOnRight(){
         return symbolNameOnRight.getText();
     }
 
